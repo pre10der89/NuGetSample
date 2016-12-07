@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>AppLogger.ANFORSTE</id>
+    <version>1.0.0.0</version>
+    <title>AppLogger.ANFORSTE</title>
+    <authors>anforste</authors>
+    <owners>anforste</owners>
+    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
+    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AppLogger.ANFORSTE</description>
+    <releaseNotes>Awesome application logging utility First release</releaseNotes>
+    <copyright>Copyright 2016 (c) Contoso Corporation. All rights reserved</copyright>
+    <tags>logger logging logs</tags>
+  </metadata>
+  <!-- Insert below <metadata> element -->
+  <files>
+    <file src="bin\Release\AppLogger.dll" target="lib\netstandard1.2\AppLogger.dll" />
+    <file src="bin\Release\AppLogger.xml" target="lib\netstandard1.2\AppLogger.xml" />
+  </files>
+</package>
