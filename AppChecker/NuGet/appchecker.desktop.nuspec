@@ -16,14 +16,14 @@
 
   <files>
     <!-- build -->
-    <file src="AppChecker.Desktop.props" target="build\net45"/>
+    <file src="AppChecker.Desktop.targets" target="build\net45"/>
 
     <!-- lib -->
     <file src="..\AppChecker.Desktop\bin\release\AppChecker.Desktop.dll" target="lib\netstandard1.0"/>
 
     <!-- runtimes -->
-    <file src="..\AppChecker.Desktop\bin\x86\release\AppChecker.Desktop.dll" target="runtimes\win7-x86\lib"/>
-    <file src="..\AppChecker.Desktop\bin\x64\release\AppChecker.Desktop.dll" target="runtimes\win7-x64\lib"/>
+    <file src="..\AppChecker.Desktop\bin\x86\release\AppChecker.Desktop.dll" target="runtimes\win-x86\lib"/>
+    <file src="..\AppChecker.Desktop\bin\x64\release\AppChecker.Desktop.dll" target="runtimes\win-x64\lib"/>
     
   </files>
   
