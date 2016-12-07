@@ -1,4 +1,4 @@
-nuget pack appchecker.netstandard.nuspec
+.\tools\nuget.exe pack appchecker.netstandard.nuspec
 
 copy /Y *.nupkg  "C:\Dev\Local NuGet Repository\*"
 pause
