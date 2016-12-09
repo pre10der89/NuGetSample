@@ -32,12 +32,14 @@
 *.lib
 *.sbr
 *.sdf
+*.suo
 *.opensdf
 *.opendb
 *.unsuccessfulbuild
 *.lastbuildstate
 ipch/
 [Oo]bj/
+.vs/
 [Bb]in
 [Dd]ebug*/
 [Rr]elease*/

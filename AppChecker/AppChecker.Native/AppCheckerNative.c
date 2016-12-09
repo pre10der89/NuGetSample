@@ -84,43 +84,25 @@ OSType GetOSType(void)
 
 	ProcessorArchitecture architecture = GetArchitecture();
 
-	if (IsWindows7OrGreater() || IsWindows7SP1OrGreater() && !IsWindows8OrGreater())
+	if (IsWindows10OrGreaterLocal())
 	{
 		switch (architecture)
 		{
 		case X64:
-			osType = win7_x64;
+			osType = win10_x64;
 			break;
 		case X86:
-			osType = win7_x64;
+			osType = win10_x64;
 			break;
 		case ARM:
-			osType = win7_arm;
+			osType = win10_arm;
 			break;
 		default:
-			osType = win7;
+			osType = win10;
 			break;
 		}
 	}
-	else if (IsWindows8OrGreater() && !IsWindows8Point1OrGreater())
-	{
-		switch (architecture)
-		{
-		case X64:
-			osType = win8_x64;
-			break;
-		case X86:
-			osType = win8_x64;
-			break;
-		case ARM:
-			osType = win8_arm;
-			break;
-		default:
-			osType = win8;
-			break;
-		}
-	}
-	else if (IsWindows8Point1OrGreater() && !IsWindows10OrGreaterLocal())
+	else if (IsWindows8Point1OrGreater())
 	{
 		switch (architecture)
 		{
@@ -138,21 +120,39 @@ OSType GetOSType(void)
 			break;
 		}
 	}
-	else if (IsWindows10OrGreaterLocal())
+	else if (IsWindows8OrGreater())
 	{
 		switch (architecture)
 		{
 		case X64:
-			osType = win10_x64;
+			osType = win8_x64;
 			break;
 		case X86:
-			osType = win10_x64;
+			osType = win8_x64;
 			break;
 		case ARM:
-			osType = win10_arm;
+			osType = win8_arm;
 			break;
 		default:
-			osType = win10;
+			osType = win8;
+			break;
+		}
+	}
+	else if (IsWindows7OrGreater() || IsWindows7SP1OrGreater())
+	{
+		switch (architecture)
+		{
+		case X64:
+			osType = win7_x64;
+			break;
+		case X86:
+			osType = win7_x64;
+			break;
+		case ARM:
+			osType = win7_arm;
+			break;
+		default:
+			osType = win7;
 			break;
 		}
 	}
