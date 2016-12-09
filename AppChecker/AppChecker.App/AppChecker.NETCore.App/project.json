@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0-*",
+  "buildOptions": {
+    "debugType": "portable",
+    "emitEntryPoint": true,
+    "define": [ "NETCORE" ]
+  },
+  "dependencies": {
+    "AppChecker.NET": "3.0.0"
+  },
+  "frameworks": {
+    "netcoreapp1.0": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "version": "1.0.1"
+        }
+      },
+      "imports": "dnxcore50"
+    }
+  },
+  "runtimes": {
+    "osx.10.10-x64": {},
+    "ubuntu.14.04-x64": {},
+    "win10-arm": {},
+    "win10-x86": {},
+    "win10-x64": {},
+    "win8-arm": {},
+    "win8-x86": {},
+    "win8-x64": {},
+    "win7-x64": {},
+    "win7-x86": {}
+  }
+}

@@ -13,17 +13,27 @@
     </Content>
   </ItemGroup>
   <ItemGroup Condition=" (Exists('packages.config') Or Exists('packages.$(MSBuildProjectName).config')) And '$(Platform)' == 'x86'">
+    <Content Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\lib\netstandard\*">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </Content>
     <Content Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x86\native\*">
       <Link>%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>False</Visible>
-    </Content>
+    </Content>    
   </ItemGroup>
   <ItemGroup Condition=" (Exists('packages.config') Or Exists('packages.$(MSBuildProjectName).config')) And '$(Platform)' == 'x64'">
-    <Content Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\*">
+    <Content Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\lib\netstandard\*">
       <Link>%(Filename)%(Extension)</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <Visible>False</Visible>
     </Content>
+    <Content Include="$(MSBuildThisFileDirectory)..\..\runtimes\win-x64\native\*">
+      <Link>%(Filename)%(Extension)</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <Visible>False</Visible>
+    </Content>    
   </ItemGroup>
 </Project>

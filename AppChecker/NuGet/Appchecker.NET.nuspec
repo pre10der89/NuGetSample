@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>AppChecker.NET</id>
+    <version>3.0.0</version>
+    <authors>BlueJeans Development Team</authors>
+    <owners>BlueJeans Development Team</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AppChecker is a software test library.</description>
+    <copyright>Public Domain</copyright>
+    <tags></tags>
+    <dependencies>
+      <group targetFramework=".NETStandard1.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- build -->
+    <file src="AppChecker.NET.targets" target="build\netstandard"/>
+
+    <!-- lib -->
+    <file src="..\AppChecker.NETStandard\bin\release\AppChecker.dll" target="lib\netstandard"/>
+
+    <!-- runtimes -->
+    <file src="..\AppChecker.NETStandard\bin\x86\release\AppChecker.dll" target="runtimes\win-x86\lib\netstandard"/>
+    <file src="..\AppChecker.NETStandard\bin\x64\release\AppChecker.dll" target="runtimes\win-x64\lib\netstandard"/>
+    
+    <file src="..\AppChecker.Native\bin\x86\release\AppCheckerNative.dll" target="runtimes\win-x86\native"/>
+    <file src="..\AppChecker.Native\bin\x64\release\AppCheckerNative.dll" target="runtimes\win-x64\native"/>
+  </files>
+</package>
