@@ -79,7 +79,7 @@
     <OutputPath>bin\x64\Release\</OutputPath>
     <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
     <Optimize>true</Optimize>
-    <NoWarn>;2008</NoWarn>
+    <NoWarn>;2008;1591</NoWarn>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
@@ -107,6 +107,9 @@
     <None Include="AppChecker.Universal.App_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AppCheckerNative.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -126,17 +129,31 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AppChecker.NETStandard\AppChecker.NETStandard.csproj">
+      <Project>{cf28d1be-a06c-4120-93b9-9aa9d5cc2562}</Project>
+      <Name>AppChecker.NETStandard</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="..\AppChecker.Shared.App\AppChecker.Shared.App.projitems" Label="Shared" />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+<<<<<<< HEAD
   <Import Project="$(SolutionDir)Build\AppChecker.BeforeBuild.targets" Label="AppCheckerBeforeBuild" />
   <Target Name="BeforeBuild" DependsOnTargets="$(AppCheckerBeforeBuild)">
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
+=======
+>>>>>>> 6f7c1ba38fc39020c58d412defc1f78aafa7e107
   <Target Name="AfterBuild">
+    <ItemGroup>
+      <NativeDll Include="$(SolutionDir)AppChecker.Native\bin\$(Platform)\$(Configuration)\AppCheckerNative.*" />
+    </ItemGroup>
+    <Copy SourceFiles="@(NativeDll)" DestinationFolder="$(OutputPath)" ContinueOnError="false" />
+    <Copy SourceFiles="@(NativeDll)" DestinationFolder="$(OutputPath)AppX" ContinueOnError="false" />
   </Target>
-  -->
 </Project>

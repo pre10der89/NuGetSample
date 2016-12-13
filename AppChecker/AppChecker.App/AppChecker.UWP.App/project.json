@@ -1,7 +1,12 @@
 ﻿{
   "dependencies": {
+<<<<<<< HEAD
     "AppChecker.NET": "3.0.0",
     "Microsoft.NETCore.UniversalWindowsPlatform": "5.1.0"
+=======
+    "Microsoft.NETCore.UniversalWindowsPlatform": "5.2.2",
+    "Microsoft.NETNative.Analyzer": "1.0.0"
+>>>>>>> 6f7c1ba38fc39020c58d412defc1f78aafa7e107
   },
   "frameworks": {
     "uap10.0": {}
