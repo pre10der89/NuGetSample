@@ -74,7 +74,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Facebook.Yoga, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Facebook.Yoga.2.0.2-pre\lib\netstandard\Facebook.Yoga.dll</HintPath>
+      <HintPath>..\..\packages\Facebook.Yoga.2.0.4-pre\lib\netstandard\Facebook.Yoga.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -96,13 +96,6 @@
   </ItemGroup>
   <Import Project="..\Facebook.Yoga.Shared.Tests\Facebook.Yoga.Shared.Tests.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\..\packages\Facebook.Yoga.2.0.2-pre\build\netstandard\Facebook.Yoga.targets" Condition="Exists('..\..\packages\Facebook.Yoga.2.0.2-pre\build\netstandard\Facebook.Yoga.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Facebook.Yoga.2.0.2-pre\build\netstandard\Facebook.Yoga.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Facebook.Yoga.2.0.2-pre\build\netstandard\Facebook.Yoga.targets'))" />
-  </Target>
   <Target Name="AfterBuild">
     <PropertyGroup>
       <NativeOutputPathX86>$(OutputPath)x86</NativeOutputPathX86>
@@ -133,5 +126,12 @@
     <RemoveDir Directories="$(NativeOutputPathX86)" Condition="Exists('$(NativeOutputPathX86)')" />
     <RemoveDir Directories="$(NativeOutputPathARM)" Condition="Exists('$(NativeOutputPathARM)')" />
     <RemoveDir Directories="$(NativeOutputPathX64)" Condition="Exists('$(NativeOutputPathX64)')" />
+  </Target>
+  <Import Project="..\..\packages\Facebook.Yoga.2.0.4-pre\build\netstandard\Facebook.Yoga.targets" Condition="Exists('..\..\packages\Facebook.Yoga.2.0.4-pre\build\netstandard\Facebook.Yoga.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\packages\Facebook.Yoga.2.0.4-pre\build\netstandard\Facebook.Yoga.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Facebook.Yoga.2.0.4-pre\build\netstandard\Facebook.Yoga.targets'))" />
   </Target>
 </Project>

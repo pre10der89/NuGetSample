@@ -50,9 +50,13 @@ namespace Facebook.Yoga.Package.Tests
 
         private string GetExecutingAssemblyName()
         {
+#if !WINDOWS_UWP
             Assembly currentAssem = Assembly.GetExecutingAssembly();
 
             return currentAssem.Location;
+#else
+            return "UWP Application";
+#endif
         }
     }
 }
