@@ -48,11 +48,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppChecker.AnyCPU32Bit.App"
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "AppChecker.NETCore.App", "AppChecker.App\AppChecker.NETCore.App\AppChecker.NETCore.App.xproj", "{7650F4CA-8EA0-4A7C-BE9C-87619BAD3E76}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppChecker.DirectReference.App", "AppChecker.App\AppChecker.DirectReference.App\AppChecker.DirectReference.App.csproj", "{52E99327-C1F0-485C-83B5-9728267A935A}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AppChecker.App\AppChecker.Shared.App\AppChecker.Shared.App.projitems*{257f1e39-5005-40b8-bdcd-fd8fd6439d29}*SharedItemsImports = 4
 		AppChecker.App\AppChecker.Shared.App\AppChecker.Shared.App.projitems*{412255fb-9e37-432a-97d9-f71fe2a5cfa0}*SharedItemsImports = 13
-		AppChecker.App\AppChecker.Shared.App\AppChecker.Shared.App.projitems*{7980abda-53ce-4e68-8a60-511a09382f7a}*SharedItemsImports = 4
+		AppChecker.App\AppChecker.Shared.App\AppChecker.Shared.App.projitems*{52e99327-c1f0-485c-83b5-9728267a935a}*SharedItemsImports = 4
 		AppChecker.App\AppChecker.Shared.App\AppChecker.Shared.App.projitems*{7fb1e8b4-2cc5-48ae-825b-390176c866bf}*SharedItemsImports = 4
 		AppChecker.App\AppChecker.Shared.App\AppChecker.Shared.App.projitems*{8f6efbd8-6b7d-4dda-a61d-9a16a70a3423}*SharedItemsImports = 4
 		AppChecker.App\AppChecker.Shared.App\AppChecker.Shared.App.projitems*{9f50dc8e-833f-4346-bfa6-2ba9673c079b}*SharedItemsImports = 4
@@ -253,6 +255,22 @@ Global
 		{7650F4CA-8EA0-4A7C-BE9C-87619BAD3E76}.Release|x64.Build.0 = Release|Any CPU
 		{7650F4CA-8EA0-4A7C-BE9C-87619BAD3E76}.Release|x86.ActiveCfg = Release|Any CPU
 		{7650F4CA-8EA0-4A7C-BE9C-87619BAD3E76}.Release|x86.Build.0 = Release|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Debug|ARM.Build.0 = Debug|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Debug|x64.ActiveCfg = Debug|x64
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Debug|x64.Build.0 = Debug|x64
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Debug|x86.ActiveCfg = Debug|x86
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Debug|x86.Build.0 = Debug|x86
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Release|ARM.ActiveCfg = Release|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Release|ARM.Build.0 = Release|Any CPU
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Release|x64.ActiveCfg = Release|x64
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Release|x64.Build.0 = Release|x64
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Release|x86.ActiveCfg = Release|x86
+		{52E99327-C1F0-485C-83B5-9728267A935A}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -272,5 +290,6 @@ Global
 		{257F1E39-5005-40B8-BDCD-FD8FD6439D29} = {BE28C9CC-0867-42DC-99A0-4F298CF070B6}
 		{7FB1E8B4-2CC5-48AE-825B-390176C866BF} = {BE28C9CC-0867-42DC-99A0-4F298CF070B6}
 		{7650F4CA-8EA0-4A7C-BE9C-87619BAD3E76} = {BE28C9CC-0867-42DC-99A0-4F298CF070B6}
+		{52E99327-C1F0-485C-83B5-9728267A935A} = {BE28C9CC-0867-42DC-99A0-4F298CF070B6}
 	EndGlobalSection
 EndGlobal

@@ -27,6 +27,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -75,10 +76,6 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AppChecker, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\AppChecker.NET.3.0.0\lib\netstandard\AppChecker.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -117,22 +114,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AppChecker.NETStandard\AppChecker.NETStandard.csproj">
+      <Project>{cf28d1be-a06c-4120-93b9-9aa9d5cc2562}</Project>
+      <Name>AppChecker.NETStandard</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="..\AppChecker.Shared.App\AppChecker.Shared.App.projitems" Label="Shared" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <Import Project="..\..\packages\AppChecker.NET.3.0.0\build\netstandard\AppChecker.NET.targets" Condition="Exists('..\..\packages\AppChecker.NET.3.0.0\build\netstandard\AppChecker.NET.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+  <Import Project="$(SolutionDir)Build\AppChecker.NativeInterop.targets" Condition="Exists('$(SolutionDir)Build\AppChecker.NativeInterop.targets')" Label="AppCheckerBeforeBuild" />
+  <Target Name="EnsureBeforeBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>This project references a build target that is missing. The missing build target is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\AppChecker.NET.3.0.0\build\netstandard\AppChecker.NET.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\AppChecker.NET.3.0.0\build\netstandard\AppChecker.NET.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)Build\AppChecker.NativeInterop.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)Build\AppChecker.NativeInterop.targets'))" />
   </Target>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>
