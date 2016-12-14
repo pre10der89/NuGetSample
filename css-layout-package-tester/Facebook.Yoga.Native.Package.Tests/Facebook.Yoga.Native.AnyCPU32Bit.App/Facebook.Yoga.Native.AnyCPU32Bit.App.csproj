@@ -125,11 +125,11 @@
     <RemoveDir Directories="$(NativeOutputPathARM)" Condition="Exists('$(NativeOutputPathARM)')" />
     <RemoveDir Directories="$(NativeOutputPathX64)" Condition="Exists('$(NativeOutputPathX64)')" />
   </Target>
-  <Import Project="..\..\packages\Facebook.Yoga.Native.2.0.4-pre\build\netstandard1.0\Facebook.Yoga.Native.targets" Condition="Exists('..\..\packages\Facebook.Yoga.Native.2.0.4-pre\build\netstandard1.0\Facebook.Yoga.Native.targets')" />
+  <Import Project="..\..\packages\Facebook.Yoga.Native.3.0.0-pre\build\netstandard1.0\Facebook.Yoga.Native.targets" Condition="Exists('..\..\packages\Facebook.Yoga.Native.3.0.0-pre\build\netstandard1.0\Facebook.Yoga.Native.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\..\packages\Facebook.Yoga.Native.2.0.4-pre\build\netstandard1.0\Facebook.Yoga.Native.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Facebook.Yoga.Native.2.0.4-pre\build\netstandard1.0\Facebook.Yoga.Native.targets'))" />
+    <Error Condition="!Exists('..\..\packages\Facebook.Yoga.Native.3.0.0-pre\build\netstandard1.0\Facebook.Yoga.Native.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Facebook.Yoga.Native.3.0.0-pre\build\netstandard1.0\Facebook.Yoga.Native.targets'))" />
   </Target>
 </Project>
